@@ -6,7 +6,7 @@ import BoardContext from "../Board/context";
 
 import {Container, Label } from "./styles";
 
-export default function Card({data, index}){
+export default function Card({data, index, listIndex}){
     //react nao pode duas ref entao eh usado para poder 
     //dar o dropRef
     const ref = useRef();
@@ -16,7 +16,7 @@ export default function Card({data, index}){
 
     //para poder fazer o drag
     const [{isDragging}, dragRef] = useDrag({
-        item:{type:'CARD', index},
+        item:{type:'CARD', index, listIndex},
         collect: monitor => ({
             isDragging: monitor.isDragging(),
         }),
@@ -28,6 +28,8 @@ export default function Card({data, index}){
         hover:function(item,monitor){
             const draggedIndex = item.index;
             const targetIndex = index;
+            const draggedListIndex = item.listIndex;
+            // const targgetListIndex = listItem;
 
             //ignora se tiver em cima dele
             if (draggedIndex==targetIndex){
@@ -42,7 +44,6 @@ export default function Card({data, index}){
             const draggedTop = draggedOffSet.y - targetSize.top;
             //o elemento tem index maior do que o alvo e nao passou do centro
             //continua na mesma posicao
-            console.log(draggedIndex,targetIndex, draggedTop, targetCenter);
             if (draggedIndex < targetIndex && draggedTop < targetCenter){
                 return;
             }
@@ -50,11 +51,15 @@ export default function Card({data, index}){
             if (draggedIndex > targetIndex && draggedTop > targetCenter){
                 return;
             }
-            console.log('ola');
+            move(draggedIndex,targetIndex,draggedListIndex);
+
+            //o objeto nao atualiza entao diz para ele que ele mudou de prosicao
+            item.index = targetIndex;
         }
     });
 
     //agora as duas ref estao em uma
+    //react nao deixa duas refs para dois elementos
     dragRef(dropRef(ref));
     
 
