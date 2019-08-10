@@ -7,7 +7,8 @@ export default function Home(){
     return (
         <>
             <Label>Selecione um clone</Label>
-            <Option to="pipefy" name="Pipefy" bgColor="#154" textColor="#154" />
+            <Option to="pipefy" name="Pipefy" color="#6EABCF" />
+            <Option to="reddit" name="Reddit" color="#ff4500" />
             
             <GlobalStyles />
         </>

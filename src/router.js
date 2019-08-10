@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Pipefy from "./pages/Pipefy";
 import Home from "./pages/Home";
+import Reddit from "./pages/Reddit";
 
 //stateless components
 //pode ser declarado como uma função
@@ -13,6 +14,7 @@ const Routes = () => {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/pipefy" component={Pipefy} />
+                <Route exact path="/reddit" component={Reddit} />
             </Switch>
         </BrowserRouter>
     )

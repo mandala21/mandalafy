@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container } from "./styles";
+import { Container, Style } from "./styles";
 
-export default function Option({ to, name }) {
+export default function Option({ to, name, color }) {
     return (
-        <Container>
-            <Link to={to}>{name}</Link>
-        </Container>
+        <>
+            <Link to={to}>
+                <Container color={color}>
+                    <span>{name}</span>
+                </Container>
+            </Link>
+        </>
     );
 }
