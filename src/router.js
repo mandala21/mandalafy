@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Pipefy from "./pages/Pipefy";
+import Home from "./pages/Home";
 
 //stateless components
 //pode ser declarado como uma função
@@ -10,7 +11,7 @@ const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={()=><Link to="pipefy">Pipefy</Link>} />
+                <Route exact path="/" component={Home} />
                 <Route exact path="/pipefy" component={Pipefy} />
             </Switch>
         </BrowserRouter>
