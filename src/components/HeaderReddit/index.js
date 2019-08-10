@@ -53,7 +53,7 @@ export default function HeaderReddit(){
                 </ButtonIcon>
             </a>
 
-            <ConatinerSelectInput>
+            <ConatinerSelectInput mgLf='8px'>
                 <UserAvatar photo="https://www.redditstatic.com/avatars/avatar_default_12_FFD635.png"  />
                 <ArrowDown />
             </ConatinerSelectInput>

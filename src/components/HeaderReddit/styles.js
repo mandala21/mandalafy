@@ -49,7 +49,7 @@ export const ConatinerSelectInput = styled.div`
     border-radius: 6px;
     display: flex;
     align-items: center;
-    margin-left: 16px;
+    margin-left: ${props=> props.mgLf ? props.mgLf : '16px' };
     height: 70%;
     border: 1px solid transparent;
 
@@ -74,8 +74,8 @@ export const SelectInput = styled.select`
 `;
 
 export const IconSelect = styled.div`
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-color: #0079d3;
     -webkit-mask-image: url(${HomeIcon});
     mask-image: url(${HomeIcon});
