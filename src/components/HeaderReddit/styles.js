@@ -98,4 +98,13 @@ export const ButtonIcon = styled.div`
     }
 `;
 
+export const UserAvatar = styled.div `
+    background-image: url("${props => props.photo}");
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 8px;
+`;
+
 

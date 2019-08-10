@@ -2,9 +2,9 @@ import React from "react";
 import RedditLogo from "../../assets/reddit-logo.png";
 import { MdSearch, MdTrendingUp } from "react-icons/md";
 
-import { ContainerNavIcon, ButtonIcon ,IconSelect, Container, ContainerSearchInput, SearchInput, SelectInput, ConatinerSelectInput } from "./styles";
+import { UserAvatar, ContainerNavIcon, ButtonIcon ,IconSelect, Container, ContainerSearchInput, SearchInput, SelectInput, ConatinerSelectInput } from "./styles";
 
-import { TrendUpIcon, AllIcon, OCIcon, BallomIcon, MessageIcon, WriteIcon } from "./icons";
+import { ArrowDown ,TrendUpIcon, AllIcon, OCIcon, BallomIcon, MessageIcon, WriteIcon } from "./icons";
  
 export default function HeaderReddit(){
     return (
@@ -53,7 +53,10 @@ export default function HeaderReddit(){
                 </ButtonIcon>
             </a>
 
-            
+            <ConatinerSelectInput>
+                <UserAvatar photo="https://www.redditstatic.com/avatars/avatar_default_12_FFD635.png"  />
+                <ArrowDown />
+            </ConatinerSelectInput>
         </Container>
     );
 }
