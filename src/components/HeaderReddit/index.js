@@ -4,7 +4,7 @@ import { MdSearch, MdTrendingUp } from "react-icons/md";
 
 import { ContainerNavIcon, ButtonIcon ,IconSelect, Container, ContainerSearchInput, SearchInput, SelectInput, ConatinerSelectInput } from "./styles";
 
-import { TrendUpIcon, AllIcon, OCIcon } from "./icons";
+import { TrendUpIcon, AllIcon, OCIcon, BallomIcon, MessageIcon, WriteIcon } from "./icons";
  
 export default function HeaderReddit(){
     return (
@@ -37,6 +37,23 @@ export default function HeaderReddit(){
                     </ButtonIcon>
                 </a>
             </ContainerNavIcon>
+            <a href="#">
+                <ButtonIcon >
+                    <BallomIcon />
+                </ButtonIcon>
+            </a>
+            <a href="#">
+                <ButtonIcon >
+                    <MessageIcon />
+                </ButtonIcon>
+            </a>
+            <a href="#">
+                <ButtonIcon >
+                    <WriteIcon />
+                </ButtonIcon>
+            </a>
+
+            
         </Container>
     );
 }

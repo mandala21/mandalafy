@@ -51,10 +51,15 @@ export const ConatinerSelectInput = styled.div`
     align-items: center;
     margin-left: 16px;
     height: 70%;
+    border: 1px solid transparent;
 
     &:hover {
         border: 1px solid  rgba(215,218,220,0.4);
         border-radius: 4px;
+    }
+
+    &:focus {
+        outline: none;
     }
 `;
 
@@ -79,11 +84,14 @@ export const IconSelect = styled.div`
 export const ContainerNavIcon = styled.div`
     margin-left: 16px;
     display: flex;
+    border-right: 0.5px solid rgb(215, 218, 220, .4);
+    padding-right: 16px;
 `;
 
 export const ButtonIcon = styled.div`
     padding: 8px;
     border-radius: 4px;
+    margin-left: 8px;
 
     &:hover {
         background:#2D2D2E;
