@@ -13,6 +13,7 @@ export const Container = styled.div`
     top:0;
     left: 0;
     width: 100%; 
+    z-index: 10;
 `;
 
 export const ContainerSearchInput = styled.div`
@@ -27,7 +28,7 @@ export const ContainerSearchInput = styled.div`
 
     &:hover {
         background:#1A1A1B;
-        border: 1px solid  rgba(215,218,220,0.4);
+        border: 0.5px solid  rgba(215,218,220,0.4);
     }
 `;
 
@@ -105,6 +106,5 @@ export const UserAvatar = styled.div `
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 8px;
+    border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
 `;
-
-
